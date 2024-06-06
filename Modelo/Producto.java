@@ -1,26 +1,35 @@
 package Modelo;
 
 public class Producto {
-    private int idProducto;
-    private String descripcion;
+    private int codigoProducto;
+    private String nombre;
     private double precio;
-    private int cantidad;
-    private String popularidad;
+    private String imagen;
+    private int estado;
+    private String categoria;
 
-    public int getIdProducto() {
-        return idProducto;
+public Producto(int codigoProducto, String nombre, double precio, String imagen, int estado,String categoria) {
+        this.codigoProducto = codigoProducto;
+        this.nombre = nombre;
+        this.precio = precio;
+        this.imagen = imagen;
+        this.estado = estado;
+        this.categoria = categoria;
+    }
+    public int getCodigoProducto() {
+        return codigoProducto;
     }
 
-    public void setIdProducto(int idProducto) {
-        this.idProducto = idProducto;
+    public void setCodigoProducto(int codigoProducto) {
+        this.codigoProducto = codigoProducto;
     }
 
-    public String getDescripcion() {
-        return descripcion;
+    public String getNombre() {
+        return nombre;
     }
 
-    public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
     public double getPrecio() {
@@ -31,21 +40,29 @@ public class Producto {
         this.precio = precio;
     }
 
-    public int getCantidad() {
-        return cantidad;
+    public String getImagen() {
+        return imagen;
     }
 
-    public void setCantidad(int cantidad) {
-        this.cantidad = cantidad;
+    public void setImagen(String imagen) {
+        this.imagen = imagen;
     }
 
-    public String getPopularidad() {
-        return popularidad;
+    public int getEstado() {
+        return estado;
     }
 
-    public void setPopularidad(String popularidad) {
-        this.popularidad = popularidad;
+    public void setEstado(int estado) {
+        this.estado = estado;
+    }
+    
+    public String getCategoria() {
+        return categoria;
     }
 
+    public void setCategotia(String categoria) {
+        this.categoria = categoria;
+    }
+    
     
 }
