@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.21.0.final using JasperReports Library version 6.21.0-4f56c4f36cd19e17675219a9ac4692d5f0f13b06  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteEmpleados" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="7c4ea63b-5642-4332-95f0-317d3d005f6e">
+	<style name="Table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 1_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 1_CH" mode="Opaque" backcolor="#BCDAF5">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="dsReporteEmpleado" uuid="b7492067-05b2-44f5-a1fe-70a842b6c0d9">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+		<field name="idpuesto" class="java.lang.Integer"/>
+		<field name="categoria" class="java.lang.String"/>
+		<field name="producto" class="java.lang.String"/>
+		<field name="dueño" class="java.lang.String"/>
+	</subDataset>
+	<parameter name="LogoEmpresa" class="javax.print.DocFlavor$INPUT_STREAM"/>
+	<parameter name="imagenAlternativa" class="javax.print.DocFlavor$INPUT_STREAM"/>
+	<parameter name="ds" class="net.sf.jasperreports.engine.data.JRBeanArrayDataSource"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="118" splitType="Stretch">
+			<image onErrorType="Blank">
+				<reportElement x="-10" y="20" width="80" height="80" uuid="ff67a221-6aaa-4ddf-9b77-c4c34ef0e13e">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<imageExpression><![CDATA[$P{LogoEmpresa}]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="89" y="10" width="60" height="20" uuid="59674ec1-a133-46e1-8d88-185e855f4807"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[EMPRESA:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="89" y="32" width="60" height="20" uuid="e428a9a2-f32f-493a-9685-3016ce697e89"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[RUC:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="89" y="59" width="60" height="20" uuid="285f720a-f28f-4763-837a-0e519a23919c"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[DIRECCION:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="89" y="90" width="130" height="20" uuid="06c2e877-ab13-499c-978a-dea966d7896e"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[CORREO ELECTRONICO:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="301" y="55" width="70" height="20" uuid="a267837a-a36c-4e2d-b21e-d68cb7e17162"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[TELEFONO:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="296" y="8" width="90" height="28" uuid="83f26a37-1bee-4fa0-987e-90a37d2ad384"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[FECHA Y HORA DE IMPRESION:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="160" y="9" width="120" height="22" uuid="5c54fbd3-d88f-4358-ac25-56f1752e8c2c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Mercado Unicachi Norte]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="161" y="32" width="120" height="22" uuid="7df450a6-b9a1-4f60-9982-98e1d2cda4aa"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[123456789]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="160" y="56" width="120" height="22" uuid="24079c2f-77bb-48f6-83ad-1822ba82d24f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Mall Comas]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="230" y="88" width="140" height="22" uuid="120fcc7b-a411-44d5-b3ff-81e33e6ec484"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[MercadoUnicachi@gmail.com]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="386" y="56" width="120" height="22" uuid="895f8d47-ed91-4d69-8296-6b9f0abd9b4a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[123456789]]></text>
+			</staticText>
+			<textField evaluationTime="Report" pattern="MMMMM dd, yyyy">
+				<reportElement x="393" y="12" width="96" height="25" uuid="7a6f3f5f-5742-429f-87cb-8708e0f2a7da"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField pattern="HH:mm">
+				<reportElement x="479" y="12" width="90" height="28" uuid="0aa93bb2-4e10-4515-9592-182f8b1ca6dc"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="37" splitType="Stretch">
+			<line>
+				<reportElement x="-20" y="2" width="590" height="1" uuid="edad19eb-ba07-4c62-96c1-4eed13def55d">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="7" width="559" height="30" forecolor="#FFFFFF" backcolor="#336B87" uuid="654f3945-ad08-4dc0-a086-2c359614e43d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[REPORTE DE EMPLEADOS-MERCADO UNICACHI]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="80" splitType="Stretch">
+			<componentElement>
+				<reportElement x="11" y="10" width="460" height="70" uuid="6ac379d4-6182-4650-b91e-1f395bd3cd50">
+					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+					<property name="com.jaspersoft.studio.table.style.table_header" value="Table 1_TH"/>
+					<property name="com.jaspersoft.studio.table.style.column_header" value="Table 1_CH"/>
+					<property name="com.jaspersoft.studio.table.style.detail" value="Table 1_TD"/>
+				</reportElement>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="dsReporteEmpleado" uuid="5e83be40-952a-4ccd-a947-6ec698cb10a5">
+						<dataSourceExpression><![CDATA[$P{ds}]]></dataSourceExpression>
+					</datasetRun>
+					<jr:column width="80" uuid="b0d4df22-9669-498d-b6c0-45ab0ea3a83b">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column1"/>
+						<jr:columnHeader style="Table 1_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="80" height="30" backcolor="#FFFFFF" uuid="200bb11f-8eee-4b28-a8c6-3070dcdc7d8a"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="12" isBold="true"/>
+								</textElement>
+								<text><![CDATA[ID ]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table 1_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="80" height="30" uuid="e40022f2-cee3-4973-910d-c0a06dd7a1b9"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{idpuesto}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="110" uuid="97b17259-e2d6-4232-b316-b5e4c60a5535">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column2"/>
+						<jr:columnHeader style="Table 1_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="110" height="30" backcolor="#FFFFFF" uuid="4229060d-f46b-4e8d-adaa-0a7b0528f03e"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="12" isBold="true"/>
+								</textElement>
+								<text><![CDATA[CATEGORIA]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table 1_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="110" height="30" uuid="143b79e4-0f71-492b-ab27-532ec921d219"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{categoria}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="130" uuid="447dacd1-b392-46a8-9f27-2073da45fd85">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column3"/>
+						<jr:columnHeader style="Table 1_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="130" height="30" backcolor="#FFFFFF" uuid="c5c6b213-79f2-4fa9-95fd-f37b03f60088"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="12" isBold="true"/>
+								</textElement>
+								<text><![CDATA[PRODUCTO]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table 1_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="130" height="30" uuid="2292ca51-6941-4990-ae91-f2773edf715a"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{producto}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="130" uuid="f1d24005-e8ae-407e-ab48-e2192f215c15">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column4"/>
+						<jr:columnHeader style="Table 1_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="130" height="30" backcolor="#FFFFFF" uuid="83cd9cf2-cb5b-418d-8c2d-6d4f6c8fdbea"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="12" isBold="true"/>
+								</textElement>
+								<text><![CDATA[DUEÑO]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table 1_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="130" height="30" uuid="d56076f6-6fdc-4d28-bdf7-816b6c6c5ccf"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{dueño}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="26" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="4" width="360" height="22" uuid="ea8ded68-0722-4f05-9693-0268551c9fc6"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Representacion impresa de reportes de empleados del Mercado Unicahi ]]></text>
+			</staticText>
+			<image onErrorType="Blank">
+				<reportElement x="520" y="0" width="30" height="30" uuid="714b6e39-38f2-4f26-9a33-86fc8aac5004">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<imageExpression><![CDATA[$P{imagenAlternativa}]]></imageExpression>
+			</image>
+		</band>
+	</pageFooter>
+</jasperReport>

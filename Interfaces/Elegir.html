@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Nuestros Despachos</title>
+        <link href="../CSS/css/cssElegir.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <h1>Nuestros Despachos</h1>
+        <img src="../IMG/img1/Despacho.PNG" alt=""/>
+        <form id="formDespachos">
+            <label for="email">Para asignarte una tienda, por favor ingresa tu correo electrónico:</label>
+            <input type="email" id="email" placeholder="Tu correo electrónico" required>
+            <p>
+                <input type="checkbox" id="terminosCondiciones" required>
+                <label for="terminosCondiciones">He leído y acepto los Términos y Condiciones de compra en Metro.pe. Acepto igualmente la Política de Privacidad y Seguridad y la Política de Cookies.</label>
+            </p>
+            <button type="submit" id="botonAceptar">ACEPTAR</button>
+        </form>
+
+        <script>
+            function mostrarCuadro() {
+                var overlay = document.getElementById("overlay");
+                overlay.style.display = "block";
+            }
+
+            function cerrarCuadro() {
+                var overlay = document.getElementById("overlay");
+                overlay.style.display = "none";
+            }
+
+            document.getElementById("formDespachos").addEventListener("submit", function (event) {
+                event.preventDefault();
+                var email = document.getElementById("email").value;
+                var aceptoTerminos = document.getElementById("terminosCondiciones").checked;
+
+                if (email && aceptoTerminos) {
+                    // Aquí puedes agregar la lógica para procesar el formulario
+                    mostrarCuadro();
+                } else {
+                    alert("Por favor completa todos los campos y acepta los términos y condiciones.");
+                }
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>UNICACHI</title>
+        <meta name="format-detection" content="telephone=no">
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta charset="utf-8">
+        <link rel="icon" href="../IMG/index_u/logo1.png" type="image/x-icon">
+        <link href="../CSS/csccate.css" rel="stylesheet" type="text/css"/>
+        <!-- Stylesheets all css-->
+        <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Roboto:100,300,300i,400,500,600,700,900%7CRaleway:500">
+        <link href="../CSS/style_Cate.css" rel="stylesheet" type="text/css"/>
+
+    </head>
+    <body>    
+        <!-- menú de carga -->
+    <body>
+        <div class="preloader">
+            <div class="wrapper-triangle">
+                <div class="pen">
+                    <div class="line-triangle">
+                        <div class="triangle"></div>
+                        <div class="triangle"></div>
+                        <div class="triangle"></div>
+                        <div class="triangle"></div>
+                        <div class="triangle"></div>
+                        <div class="triangle"></div>
+                        <div class="triangle"></div>
+                    </div>
+                    <div class="line-triangle">
+                        <div class="triangle"></div>
+                        <div class="triangle"></div>
+                        <div class="triangle"></div>
+                        <div class="triangle"></div>
+                        <div class="triangle"></div>
+                        <div class="triangle"></div>
+                        <div class="triangle"></div>
+                    </div>
+                    <div class="line-triangle">
+                        <div class="triangle"></div>
+                        <div class="triangle"></div>
+                        <div class="triangle"></div>
+                        <div class="triangle"></div>
+                        <div class="triangle"></div>
+                        <div class="triangle"></div>
+                        <div class="triangle"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page">
+            <!-- Cabezal de la pagina / pageheader -->
+            <header class="section page-header">
+                <!-- Navbar-->
+                <div class="rd-navbar-wrap">
+                    <nav class="rd-navbar rd-navbar-modern" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static" data-lg-device-layout="rd-navbar-fixed" data-xl-layout="rd-navbar-static" data-xl-device-layout="rd-navbar-static" data-xxl-layout="rd-navbar-static" data-xxl-device-layout="rd-navbar-static" data-lg-stick-up-offset="56px" data-xl-stick-up-offset="56px" data-xxl-stick-up-offset="56px" data-lg-stick-up="true" data-xl-stick-up="true" data-xxl-stick-up="true">
+                        <div class="rd-navbar-inner-outer">
+                            <div class="rd-navbar-inner">
+                                <!-- Navbar Panel-->
+                                <div class="rd-navbar-panel">
+                                    <!-- Navbar Toggle-->
+                                    <!-- <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button> -->
+                                    <!-- Navbar Marca -->
+                                    <div class="rd-navbar-brand"><a class="brand" href="index.html"><img class="brand-logo-dark" src="../IMG/index_u/logo1.png" alt="" width="198" height="66"/></a></div>
+                                </div>
+                                <div class="search">
+                                    <input style="width: 300px;" class="vtex-styleguide-9-x-input ma0 border-box vtex-styleguide-9-x-hideDecorators vtex-styleguide-9-x-noAppearance br2 br-0 br--left w-100 bn outline-0 bg-base c-on-base b--muted-4 hover-b--muted-3 t-body pl5" autocomplete="off" placeholder="¿Qué buscas hoy?" type="text" id="barra-busqueda" value="">
+                                    <span class="search-icon">&#128269;</span>
+                                </div>
+                                <div class="rd-navbar-right rd-navbar-nav-wrap">
+                                    <!-- Navbar contacto -->
+                                    <div class="rd-navbar-aside">
+                                    </div>
+                                    <div class="rd-navbar-main">
+                                        <!-- Navbar Nav-->
+                                        <ul class="rd-navbar-nav">
+                                            <li class="rd-nav-item ">
+                                                <a class="rd-nav-link" href="principal.html">Inicio </a>
+                                            </li>
+                                            <!-- Enlace a la página de boleta -->
+                                            <li class="rd-nav-item">
+                                                <a class="rd-nav-link" href="../Login.jsp">Mi cuenta</a>
+                                            </li>
+                                            <!-- Enlace al menú de categorías -->
+                                            <li class="rd-nav-item active">
+                                                <a class="rd-nav-link" href="Interfaces/cate.html">Categorías</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="rd-navbar-project">
+                                    <div class="rd-navbar-project-content rd-navbar-content">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Agrega elementos de selección para el orden -->
+        <div id="ordenamiento1">
+            <label for="orden">Ordenar por:</label>
+            <select id="orden" onchange="ordenarProductos()">
+                <option value="az">A-Z</option>
+                <option value="za">Z-A</option>
+            </select>
+        </div>
+        <!-- Sección de cómo quieres recibir tu pedido -->
+        <section id="como-recibir-pedido" class="corner-heading">
+            <h3 class="small-heading">¿Cómo quieres recibir tu pedido?</h3>
+            <button onclick="mostrarCuadro()">Elegir</button>
+            <div id="fondo-negro" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 999;"></div>
+            <div id="cuadro" style="display: none; border: 1px solid #ccc; padding: 30px; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: #fff; z-index: 1000;">
+                <!-- Contenido del cuadro -->
+                <button style="position: absolute; top: 15px; right: 25px;" onclick="cerrarCuadro()">X</button>
+                <iframe src="Elegir.html" frameborder="0" width="100%" height="450"></iframe>
+            </div>
+        </section>
+
+        <section id="productos" class="productos-grid">
+            <!-- BEBIDAS -->
+            <div class="producto">
+                <div class="descuento">-6%</div>
+                <img src="../IMG/img/MixGaseosa.PNG" alt=""/>
+                <p>Mix de Gaseosas Botella 3L: Coca Cola + Inca Kola + Fanta</p>
+                <p>Precio Online :<strong class="precio-online">S/ 25.90</strong></p>
+                <p>Precio Regular :<del>S/ 27.50</del></p>
+                <button class="btn-detalle" onclick="window.location.href = 'Detalle.html'">Detalle Producto</button>
+                <button class="btn-agregar" onclick="agregarProducto()">Agregar</button>
+            </div>
+            </div>
+            <div class="producto">
+                <div class="descuento">-6%</div>
+                <img src="../IMG/img/Pack2Gaseosa.PNG" alt=""/>
+                <p>Mix de Gaseosas Botella 3L: Coca Cola + Inca Kola + Fanta</p>
+                <p>Precio Online:<strong class="precio-online">S/ 25.90</strong></p>
+                <p>Precio Regular:<del>S/ 27.50</del></p>
+                <button class="btn-detalle" onclick="window.location.href = 'Detalle.html'">Detalle Producto</button>
+                <button class="btn-agregar" onclick="agregarProducto()">Agregar</button>
+            </div>
+            <div class="producto">
+                <div class="descuento">-6%</div>
+                <img src="../IMG/img/MixGaseosa.PNG" alt=""/>
+                <p>Mix de Gaseosas Botella 3L: Coca Cola + Inca Kola + Fanta</p>
+                <p>Precio Online :<strong class="precio-online">S/ 25.90</strong></p>
+                <p>Precio Regular :<del>S/ 27.50</del></p>
+                 <button class="btn-detalle" onclick="window.location.href = 'Detalle.html'">Detalle Producto</button>
+                <button class="btn-agregar" onclick="agregarProducto()">Agregar</button>
+            </div>
+            <!-- TECNOLOGIA -->
+            <div class="producto">
+                <div class="descuento">-10%</div>
+                <img src="../IMG/img/Celu1.PNG" alt=""/>
+                <p>Celular VIVO V2206 Y22S 128GB 6GB RAM CIAN VERANO</p>
+                <p>Precio Online: <strong class="precio-online">S/899.00</strong></p>
+                <p>Precio Regular <del>S/809.10</del></p>
+                 <button class="btn-detalle" onclick="window.location.href = 'Detalle.html'">Detalle Producto</button>
+                <button class="btn-agregar" onclick="agregarProducto()">Agregar</button>
+            </div>
+            <div class="producto">
+                <div class="descuento">-10%</div>
+                <img src="../IMG/img/Celu2.PNG" alt=""/>
+                <p>Celular VIVO V2204 Y16 64GB 4GB RAM DRIZZLING DORADO LLOVIZNA</p>
+                <p>Precio Online:<strong class="precio-online">S/602.10</strong></p>
+                <p>Precio Regular:<del>S/669.00</del></p>
+                <button class="btn-detalle" onclick="window.location.href = 'Detalle.html'">Detalle Producto</button>
+                <button class="btn-agregar" onclick="agregarProducto()">Agregar</button>
+            </div>
+            <div class="producto">
+                <div class="descuento">-18%</div>
+                <img src="../IMG/img/Celu3.PNG" alt=""/>
+                <p>Celular VIVO V2204 Y16 64GB 4GB RAM DRIZZLING DORADO LLOVIZNA</p>
+                <p>Precio Online:<strong class="precio-online">S/489.00</strong></p>
+                <p>Precio Regular:<del>S/599.00</del></p>
+                 <button class="btn-detalle" onclick="window.location.href = 'Detalle.html'">Detalle Producto</button>
+                <button class="btn-agregar" onclick="agregarProducto()">Agregar</button>
+            </div>
+            <!-- ABARROTE -->
+            <div class="producto">
+                <div class="descuento">-11%</div>
+                <img src="../IMG/img/Aceite.PNG" alt=""/>
+                <p>Aceite Vegetal Primor Premium 900ml</p>
+                <p>Precio Online: <strong class="precio-online">S/ 9.50</strong></p>
+                <p>Precio Regular <del>S/ 10.70</del></p>
+                 <button class="btn-detalle" onclick="window.location.href = 'Detalle.html'">Detalle Producto</button>
+                <button class="btn-agregar" onclick="agregarProducto()">Agregar</button>
+            </div>
+            <div class="producto">
+                <div class="descuento">-10%</div>
+                <img src="../IMG/img/Aceite2.PNG" alt=""/>
+                <p>Aceite Vegetal  Soya Sao 900ml</p>
+                <p>Precio Online:<strong class="precio-online">S/ 6.50</strong></p>
+                <p>Precio Regular:<del>S/ 7.10</del></p>
+                 <button class="btn-detalle" onclick="window.location.href = 'Detalle.html'">Detalle Producto</button>
+                <button class="btn-agregar" onclick="agregarProducto()">Agregar</button>
+            </div>
+            <div class="producto">
+                <div class="descuento">-10%</div>
+                <img src="../IMG/img/Aceite3.PNG" alt=""/>
+                <p>Aceite Cocinero Vegetal 900ml</p>
+                <p>Precio Online:<strong class="precio-online">S/10.50</strong></p>
+                <p>Precio Regular:<del>S/11.50</del></p>
+               <button class="btn-detalle" onclick="window.location.href = 'Detalle.html'">Detalle Producto</button>
+                <button class="btn-agregar" onclick="agregarProducto()">Agregar</button>
+            </div>
+            <!-- FRUTA -->
+            <div class="producto">
+                <div class="descuento">-11%</div>
+                <img src="../IMG/img/Fruta1.PNG" alt=""/>
+                <p>Plátano de Seda Metro x kg</p>
+                <p>Precio Online: <strong class="precio-online">S/ 2.99 x kg</strong></p>
+                <p>Precio Regular <del>S/ 3.49 x kg</del></p>
+                <button class="btn-detalle" onclick="window.location.href = 'Detalle.html'">Detalle Producto</button>
+                <button class="btn-agregar" onclick="agregarProducto()">Agregar</button>
+            </div>
+            <div class="producto">
+                <div class="descuento">-10%</div>
+                <img src="../IMG/img/Fruta2.PNG" alt=""/>
+                <p>Manzana Americana Washington x kg</p>
+                <p>Precio Online:<strong class="precio-online">S/ 8.69 x kg</strong></p>
+                <p>Precio Regular:<del>S/ 9.69 x kg</del></p>
+                 <button class="btn-detalle" onclick="window.location.href = 'Detalle.html'">Detalle Producto</button>
+                <button class="btn-agregar" onclick="agregarProducto()">Agregar</button>
+            </div>
+            <div class="producto">
+                <div class="descuento">-10%</div>
+                <img src="../IMG/img/Fruta3.PNG" alt=""/>
+                <p>Pera Packhams x kg</p>
+                <p>Precio Online:<strong class="precio-online">S/ 5.99x kg</strong></p>
+                <p>Precio Regular:<del>S/ 8.49 x kg</del></p>
+                 <button class="btn-detalle" onclick="window.location.href = 'Detalle.html'">Detalle Producto</button>
+                <button class="btn-agregar" onclick="agregarProducto()">Agregar</button>
+            </div>
+            <!-- VERDURAS -->
+            <div class="producto">
+                <div class="descuento">-10%</div>
+                <img src="../IMG/img/Verdura1.PNG" alt=""/>
+                <p>Cebolla Roja Metro x kg</p>
+                <p>Precio Online: <strong class="precio-online">S/ 4.99 x kg</strong></p>
+                <p>Precio Regular <del>S/ 5.99 x kg</del></p>
+                <button class="btn-detalle" onclick="window.location.href = 'Detalle.html'">Detalle Producto</button>
+                <button class="btn-agregar" onclick="agregarProducto()">Agregar</button>
+            </div>
+            <div class="producto">
+                <div class="descuento">-10%</div>
+                <img src="../IMG/img/Verdura2.PNG" alt=""/>
+                <p>Ají Amarillo x kg</p>
+                <p>Precio Online:<strong class="precio-online">S/10.79 x kg</strong></p>
+                <p>Precio Regular:<del>S/11.79 x kg</del></p>
+                 <button class="btn-detalle" onclick="window.location.href = 'Detalle.html'">Detalle Producto</button>
+                <button class="btn-agregar" onclick="agregarProducto()">Agregar</button>
+            </div>
+            <div class="producto">
+                <div class="descuento">-5%</div>
+                <img src="../IMG/img/Verdura3.PNG" alt=""/>
+                <p>Rocoto Metro x kg</p>
+                <p>Precio Online:<strong class="precio-online">S/ 13.67 x kg</strong></p>
+                <p>Precio Regular:<del>S/14.39x kg</del></p>
+                <button class="btn-detalle" onclick="window.location.href = 'Detalle.html'">Detalle Producto</button>
+                <button class="btn-agregar" onclick="agregarProducto()">Agregar</button>
+            </div>
+            <!-- POLLO -->
+            <div class="producto">
+                <div class="descuento">-10%</div>
+                <img src="../IMG/img/pollo1.PNG" alt=""/>
+                <p>Pierna con Encuentro Congelada Importada x kg</p>
+                <p>Precio Online: <strong class="precio-online">S/6.70 x kg</strong></p>
+                <p>Precio Regular <del>S/ 8.60 x kg</del></p>
+                <button class="btn-detalle" onclick="window.location.href = 'Detalle.html'">Detalle Producto</button>
+                <button class="btn-agregar" onclick="agregarProducto()">Agregar</button>
+            </div>
+            <div class="producto">
+                <div class="descuento">-15%</div>
+                <img src="../IMG/img/pollo2.PNG" alt=""/>
+                <p>Pechuga Especial de Pollo Redondos x kg</p>
+                <p>Precio Online:<strong class="precio-online">S/14.87 x kg</strong></p>
+                <p>Precio Regular:<del>S/17.50 x kg</del></p>
+                <button class="btn-detalle" onclick="window.location.href = 'Detalle.html'">Detalle Producto</button>
+                <button class="btn-agregar" onclick="agregarProducto()">Agregar</button>
+            </div>
+            <div class="producto">
+                <div class="descuento">-5%</div>
+                <img src="../IMG/img/pollo3.PNG" alt=""/>
+                <p>Piezas de Pierna x kg</p>
+                <p>Precio Online:<strong class="precio-online">S/ 13.67 x kg</strong></p>
+                <p>Precio Regular:<del>S/14.39x kg</del></p>
+                <button class="btn-detalle" onclick="window.location.href = 'Detalle.html'">Detalle Producto</button>
+                <button class="btn-agregar" onclick="agregarProducto()">Agregar</button>
+            </div>
+            <!-- CARNE -->
+            <div class="producto">
+                <div class="descuento">-10%</div>
+                <img src="../IMG/img1/carne1.PNG" alt=""/>
+                <p>Bisteck Bola de Lomo Nacional x kg</p>
+                <p>Precio Online:<strong class="precio-online">S/42.42 x kg</strong></p>
+                <p>Precio Regular:<del>S/ 49.90 x kg</del></p>
+                <button class="btn-detalle" onclick="window.location.href = 'Detalle.html'">Detalle Producto</button>
+                <button class="btn-agregar" onclick="agregarProducto()">Agregar</button>
+            </div>
+            <div class="producto">
+                <div class="descuento">-15%</div>
+                <img src="../IMG/img1/carne2.PNG" alt=""/>
+                <p>Churrasco Largo Nacional Porcionado x kg</p>
+                <p>Precio Online:<strong class="precio-online">S/39.90 x kg</strong></p>
+                <p>Precio Regular:<del>S/ 36.90 x kg</del></p>
+                 <button class="btn-detalle" onclick="window.location.href = 'Detalle.html'">Detalle Producto</button>
+                <button class="btn-agregar" onclick="agregarProducto()">Agregar</button>
+            </div>
+            <div class="producto">
+                <div class="descuento">-8%</div>
+                <img src="../IMG/img1/carne3.PNG" alt=""/>
+                <p>Churrasco Redondo Nacional Porcionado x kg</p>
+                <p>Precio Online:<strong class="precio-online">S/33.90 x kg</strong></p>
+                <p>Precio Regular:<del>S/36.90 x kg</del></p>
+                 <button class="btn-detalle" onclick="window.location.href = 'Detalle.html'">Detalle Producto</button>
+                <button class="btn-agregar" onclick="agregarProducto()">Agregar</button>
+            </div>
+            <!-- PESCADO -->
+            <div class="producto">
+                <div class="descuento">-20%</div>
+                <img src="../IMG/img1/pescado1.PNG" alt=""/>
+                <p>Bonito Entero x kg</p>
+                <p>Precio Online:<strong class="precio-online">S/ 5.50 x kg</strong></p>
+                <p>Precio Regular:<del>S/ 6.90 x kg</del></p>
+                 <button class="btn-detalle" onclick="window.location.href = 'Detalle.html'">Detalle Producto</button>
+                <button class="btn-agregar" onclick="agregarProducto()">Agregar</button>
+            </div>
+            <div class="producto">
+                <div class="descuento">-5%</div>
+                <img src="../IMG/img1/pescado2.PNG" alt=""/>
+                <p>Trucha Entera Eviscerada x kg</p>
+                <p>Precio Online:<strong class="precio-online">S/22.50 x kg</strong></p>
+                <p>Precio Regular:<del>S/21.4  x kg</del></p>
+                <button class="btn-detalle" onclick="window.location.href = 'Detalle.html'">Detalle Producto</button>
+                <button class="btn-agregar" onclick="agregarProducto()">Agregar</button>
+            </div>
+            <div class="producto">
+                <div class="descuento">-3%</div>
+                <img src="../IMG/img1/pescado3.PNG" alt=""/>
+                <p>Jurel Entero</p>
+                <p>Precio Online:<strong class="precio-online">S/ 8.90 x kg</strong></p>
+                <p>Precio Regular:<del>S/8.5 x kg</del></p>
+                <button class="btn-detalle" onclick="window.location.href = 'Detalle.html'">Detalle Producto</button>
+                <button class="btn-agregar" onclick="agregarProducto()">Agregar</button>
+            </div>
+            <!-- FERRETERIA -->
+            <div class="producto">
+                <div class="descuento">-23%</div>
+                <img src="../IMG/img1/ferreteria1.PNG" alt=""/>
+                <p>Wincha Contra Impactos 8 metros Truper</p>
+                <p>Precio Online:<strong class="precio-online">S/ 32.50</strong></p>
+                <p>Precio Regular:<del>S/ 42</del></p>
+                <button class="btn-detalle" onclick="window.location.href = 'Detalle.html'">Detalle Producto</button>
+                <button class="btn-agregar" onclick="agregarProducto()">Agregar</button>
+            </div>
+            <div class="producto">
+                <div class="descuento">-23%</div>
+                <img src="../IMG/img1/ferreteria2.PNG" alt=""/>
+                <p>Taladro Atornillador Inalámbrico 3/8" 12V + Batería + Cargador Black+Decker</p>
+                <p>Precio Online:<strong class="precio-online">S/ 99.90</strong></p>
+                <p>Precio Regular:<del>S/ 129.90</del></p>
+                 <button class="btn-detalle" onclick="window.location.href = 'Detalle.html'">Detalle Producto</button>
+                <button class="btn-agregar" onclick="agregarProducto()">Agregar</button>
+            </div>
+            <div class="producto">
+                <div class="descuento">-5%</div>
+                <img src="../IMG/img1/ferreteria3.PNG" alt=""/>
+                <p>Amoladora angular GWS 850 - 850W Bosch</p>
+                <p>Precio Online:<strong class="precio-online">S/ 197.505</strong></p>
+                <p>Precio Regular:<del>S/ 207.90 </del></p>
+                <button class="btn-detalle" onclick="window.location.href = 'Detalle.html'">Detalle Producto</button>
+                <button class="btn-agregar" onclick="agregarProducto()">Agregar</button>
+            </div>
+            <!-- ROPA -->
+            <div class="producto">
+                <div class="descuento">-10%</div>
+                <img src="../IMG/img1/Ropa1.PNG" alt=""/>
+                <p>Casaca acolchada repelente al agua</p>
+                <p>Precio Online:<strong class="precio-online">S/ 69.95 </strong></p>
+                <p>Precio Regular:<del>S/62.95</del></p>
+                <button class="btn-detalle" onclick="window.location.href = 'Detalle.html'">Detalle Producto</button>
+                <button class="btn-agregar" onclick="agregarProducto()">Agregar</button>
+            </div>
+            <div class="producto">
+                <div class="descuento">-17%</div>
+                <img src="../IMG/img1/Ropa2.PNG" alt=""/>
+                <p>Casaca acolchada con capucha</p>
+                <p>Precio Online:<strong class="precio-online">S/ 99.95</strong></p>
+                <p>Precio Regular:<del>S/ 82.95</del></p>
+                 <button class="btn-detalle" onclick="window.location.href = 'Detalle.html'">Detalle Producto</button>
+                <button class="btn-agregar" onclick="agregarProducto()">Agregar</button>
+            </div>
+            <div class="producto">
+                <div class="descuento">-28%</div>
+                <img src="../IMG/img1/Ropa3.PNG" alt=""/>
+                <p>Casaca de béisbol con aplicaciones</p>
+                <p>Precio Online:<strong class="precio-online">S/ 99.95</strong></p>
+                <p>Precio Regular:<del>S/71.96 </del></p>
+                 <button class="btn-detalle" onclick="window.location.href = 'Detalle.html'">Detalle Producto</button>
+                <button class="btn-agregar" onclick="agregarProducto()">Agregar</button>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Global Mailform Output-->
+    <div class="snackbars" id="form-output-global"></div>
+    <!-- Javascript-->
+    <script src="../js/core.min.js" type="text/javascript"></script>
+    <script src="../js/script.js" type="text/javascript"></script>
+    <script src="../js/Ordena.js" type="text/javascript"></script>
+    <script src="../js/Conteo.js" type="text/javascript"></script>
+    <script src="../js/Cuadro.js" type="text/javascript"></script>
+    <script src="../js/ConteoProduc.js" type="text/javascript"></script>
+    <script src="../js/java.js" type="text/javascript"></script>
+
+</body>
+</html>
